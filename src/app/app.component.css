@@ -1,0 +1,74 @@
+.app-container{
+    width: 100vw;
+    height: 100vh;
+    background-color: hsl(225, 43%, 61%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.weather-container{
+    height: 85vh;
+    width: 90vw;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Daytime theme 
+.day .left-container {
+    flex: 3;
+    background: linear-gradient(to right, #ffe259, #ffa751); /* Gradient from light yellow to orange 
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.day .right-container {
+    flex: 7;
+    background: linear-gradient(to left, #83a4d4, #b6fbff); /* Light blue to pale cyan 
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.day .weather-container {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Lighter shadow for a subtle effect 
+} */
+
+/* Nighttime theme */
+.left-container {
+    flex: 3;
+    background: linear-gradient(to right, #82c4f3, #a4d8f4);
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.right-container {
+    flex: 7;
+    background: linear-gradient(to left, #2c3e50, #34495e);
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+/*.night .weather-container {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}*/
+
+
+
+.left-container:hover, .right-container:hover {
+    filter: brightness(110%); /* Lightens the container on hover */
+    transition: filter 0.3s; /* Smooth transition for the filter */
+}
+
+.left-container, .right-container {
+    transition: background-color 0.3s ease-in-out;
+}
+
+
+
+

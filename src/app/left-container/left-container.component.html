@@ -1,0 +1,29 @@
+<div class="left-container">
+    <div class="left-container-nav-bar">
+        <div class="search-icon" (click)="onSearch(location.value)"><fa-icon [icon]="faMagnifyingGlass"></fa-icon></div>
+        <div class="search-input-box"><input type="text" placeholder="Search for location..." #location (keyup.Enter)="onSearch(location.value)"></div>
+        <div class="location-icon" (click)="onSearch(location.value)"><fa-icon [icon]="faLocation"></fa-icon></div>
+    </div>
+    <div class="left-container-data-box">
+        <div class="left-container-temp-data">
+            <div class="left-container-temp-img"><img src={{this.weatherService.currentTemperature.summaryImage}} alt="summaryImage"></div>
+            <div class="left-container-temp-value">{{weatherService.celsius == true ? weatherService.currentTemperature.temperature : weatherService.celsiusToFahrenheit(weatherService.currentTemperature.temperature)}}<sup>{{weatherService.celsius == true ? "°C" : "°F"}}</sup></div>
+            <div class="left-container-day-time">{{this.weatherService.currentTemperature.day}}, <span>{{this.weatherService.currentTemperature.time}}</span></div>
+        </div>
+        <div class="dividing-line"></div>
+        <div class="left-container-other-details">
+            <div class="left-container-temp-summary">
+                <div class="left-container-temp-summary-phrase-img"><fa-icon [icon]="faCloud" style="color: #006cc1;"></fa-icon></div>
+                <div class="left-containertemp-summary-value">{{this.weatherService.currentTemperature.summaryPhrase}}</div>
+            </div>
+            <div class="left-container-rain-stats">
+                <div class="left-container-rain-stats-img"><fa-icon [icon]="faCloudRain" style="color: #006cc1;"></fa-icon></div>
+                <div class="left-container-rain-stats-value">Rain - {{this.weatherService.currentTemperature.rainPercent}}</div>
+            </div>
+            <div class="left-container-location-details">
+                <div class="left-container-location-img"><img src="./../../assets/Kolkata.webp" alt=""></div>
+                <div class="left-container-location-name">{{this.weatherService.currentTemperature.location}}</div>
+            </div>
+        </div>
+    </div>
+</div>
